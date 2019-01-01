@@ -25,16 +25,7 @@ public class Demo1 {
     public void test1() throws IOException {
         SqlSessionFactory sessionFactory = getSqlSessionFactory();
         SqlSession sqlSession = sessionFactory.openSession();
-        try {
-            UserMapper mapper = sqlSession.getMapper(UserMapper.class);
-            List<User> list = mapper.findAll();
-            for (User user : list) {
-                System.out.println(user);
-            }
-            sqlSession.commit();
-        } finally {
-            sqlSession.close();
-        }
+
 
 
     }
